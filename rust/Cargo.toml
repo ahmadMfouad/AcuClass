@@ -1,0 +1,29 @@
+[package]
+name = "audio_noise_classifier"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Audio processing
+hound = "3.5"
+cpal = "0.15"
+ringbuf = "0.3"
+
+# Math and signal processing
+rustfft = "6.1"
+ndarray = "0.15"
+num-complex = "0.4"
+
+# ML inference - you'll need to convert your model to ONNX
+ort = { version = "2.0.0-rc.10" }
+
+# Async and utilities
+tokio = { version = "1.0", features = ["full"] }
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+rand = "0.8"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
